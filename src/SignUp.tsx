@@ -8,8 +8,8 @@ function SignUp()
    const [success, setSuccess] = useState(false);
 
   
-function handleChange(e) {
-    const { name, value } = e.target;
+function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target.value;
 
     setFormData((prev) => ({
       ...prev,
