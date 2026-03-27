@@ -1,0 +1,12 @@
+{
+    "dependencies": {
+        "@tailwindcss/vite": "^4.2.2",
+        "express": "^5.2.1",
+        "jspdf": "^4.2.0",
+        "svg2pdf.js": "^2.7.0",
+        "tailwindcss": "^4.2.2"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.11"
+    }
+}
