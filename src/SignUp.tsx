@@ -9,7 +9,7 @@ function SignUp()
 
   
 function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const { name, value } = e.target.value;
+    const { fullName, value } = e.target.value;
 
     setFormData((prev) => ({
       ...prev,
@@ -20,7 +20,7 @@ function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
    function validate() {
     const newErrors = {};
 
-    if (!formData.name.trim()) {
+    if (!formData.fullName.trim()) {
       newErrors.name = "Name is required";
     }
     if (!formData.email.trim()) {
