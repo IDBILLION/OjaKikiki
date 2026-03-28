@@ -3,7 +3,7 @@ import { useState } from "react";
 function SignUp() 
 {
     const initialValue = {fullName: "John Doe", email: "", password: "", confirmPassword: ""};
-   const [formData, setFormData] = useState({fullName: ""});
+   const [formData, setFormData] = useState({initialValue});
    const [errors, setErrors] = useState({});
    const [success, setSuccess] = useState(false);
 
