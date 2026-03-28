@@ -16,34 +16,6 @@ function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
       [name]: value,
     }));
   }
-
-   function validate() {
-    const newErrors = {};
-
-    if (!formData.fullName.trim()) {
-      newErrors.name = "Name is required";
-    }
-    if (!formData.email.trim()) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Email is invalid";
-    }
-
-    if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters";
-    }
-
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = "Passwords do not match";
-    }
-
-    return newErrors;
-  }
-
-   function handleSubmit (e) {
-e.preventDefault();
-const validationErrors = validate();
-    setErrors(validationErrors);
     
     if (Object.keys(validationErrors).length === 0) {
       console.log("Signup data:", formData);
