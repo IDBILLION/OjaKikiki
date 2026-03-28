@@ -3,14 +3,14 @@ import { useState } from "react";
 function SignUp() 
 {
     const initialValue = {fullName: "John Doe", email: "", password: "", confirmPassword: ""};
-   const [formData, setFormData] = useState({initialValue});
+   const [formData, setFormData] = useState(initialValue);
    const [errors, setErrors] = useState({});
    const [success, setSuccess] = useState(false);
 
   
 function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    const { fullName, value } = e.target.value;
-
+    const { name, value } = e.target;
+    
     setFormData((prev) => ({
       ...prev,
       [name]: value,
